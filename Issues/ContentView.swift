@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-//titulo do issue, estado -: titulo do issue, descrição, avatar do usuario, data, botão que abre link
 struct Result: Codable, Identifiable {
     struct User: Codable {
         var avatar_url: URL
@@ -52,18 +51,18 @@ struct ContentView: View {
             // etapa 4
             if let data = data {
                 if let decodedResponse = try? JSONDecoder().decode([Result].self, from: data) {
-                    // we have good data – go back to the main thread
+                    // trazer de volta ao main thread
                     DispatchQueue.main.async {
-                        // update our UI
+                        // atualizar UI
                         self.results = decodedResponse
                     }
 
-                    // everything is good, so we can exit
+                    // sair
                     return
                 }
             }
 
-            // if we're still here it means there was a problem
+            // se encontrar algum problema
             print("Fetch failed: \(error?.localizedDescription ?? "Erro desconhecido")")
         }.resume()
     }
