@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		9F49D7942666BA0C00BE33F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49D7932666BA0C00BE33F5 /* ContentView.swift */; };
 		9F49D7962666BA0F00BE33F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F49D7952666BA0F00BE33F5 /* Assets.xcassets */; };
 		9F49D7992666BA0F00BE33F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F49D7982666BA0F00BE33F5 /* Preview Assets.xcassets */; };
+		9F49D7A12666C2E800BE33F5 /* InformacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49D7A02666C2E800BE33F5 /* InformacaoView.swift */; };
+		9F49D7A42666C7D700BE33F5 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9F49D7A32666C7D700BE33F5 /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		9F49D7952666BA0F00BE33F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F49D7982666BA0F00BE33F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F49D79A2666BA0F00BE33F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F49D7A02666C2E800BE33F5 /* InformacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacaoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F49D7A42666C7D700BE33F5 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				9F49D7912666BA0C00BE33F5 /* IssuesApp.swift */,
 				9F49D7932666BA0C00BE33F5 /* ContentView.swift */,
+				9F49D7A02666C2E800BE33F5 /* InformacaoView.swift */,
 				9F49D7952666BA0F00BE33F5 /* Assets.xcassets */,
 				9F49D79A2666BA0F00BE33F5 /* Info.plist */,
 				9F49D7972666BA0F00BE33F5 /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = Issues;
+			packageProductDependencies = (
+				9F49D7A32666C7D700BE33F5 /* URLImage */,
+			);
 			productName = Issues;
 			productReference = 9F49D78E2666BA0C00BE33F5 /* Issues.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +120,9 @@
 				Base,
 			);
 			mainGroup = 9F49D7852666BA0C00BE33F5;
+			packageReferences = (
+				9F49D7A22666C7D700BE33F5 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 9F49D78F2666BA0C00BE33F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			files = (
 				9F49D7942666BA0C00BE33F5 /* ContentView.swift in Sources */,
 				9F49D7922666BA0C00BE33F5 /* IssuesApp.swift in Sources */,
+				9F49D7A12666C2E800BE33F5 /* InformacaoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F49D7A22666C7D700BE33F5 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F49D7A32666C7D700BE33F5 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F49D7A22666C7D700BE33F5 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F49D7862666BA0C00BE33F5 /* Project object */;
 }
